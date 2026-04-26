@@ -1,0 +1,87 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "Imani Design System color tokens. Source of truth for brand, semantic, surface, component, and data colors.",
+  "color": {
+    "brand": {
+      "tunicGreen": { "$type": "color", "$value": "#00CA00", "$description": "Primary brand, CTA, active, highlight accent" },
+      "fenceGreen": { "$type": "color", "$value": "#073C2B", "$description": "Dark brand surface, headings on light, brand text" },
+      "aquaBliss": { "$type": "color", "$value": "#B8E0D9", "$description": "Secondary accent, focus ring, soft fill" },
+      "cloudBleach": { "$type": "color", "$value": "#F2F2F2", "$description": "Alternate light surface and card fill" },
+      "blackFeather": { "$type": "color", "$value": "#101C23", "$description": "Deep neutral and body type" },
+      "white": { "$type": "color", "$value": "#FFFFFF", "$description": "Page surface and type on dark" }
+    },
+    "brandAlpha": {
+      "tunicGreen50": { "$type": "color", "$value": "rgba(0, 202, 0, 0.5)" },
+      "tunicGreen30": { "$type": "color", "$value": "rgba(0, 202, 0, 0.3)" },
+      "tunicGreen12": { "$type": "color", "$value": "rgba(0, 202, 0, 0.12)" },
+      "fenceGreen90": { "$type": "color", "$value": "rgba(7, 60, 43, 0.9)" },
+      "fenceGreen72": { "$type": "color", "$value": "rgba(7, 60, 43, 0.72)" },
+      "fenceGreen12": { "$type": "color", "$value": "rgba(7, 60, 43, 0.12)" },
+      "white14": { "$type": "color", "$value": "rgba(255, 255, 255, 0.14)" },
+      "white10": { "$type": "color", "$value": "rgba(255, 255, 255, 0.1)" }
+    },
+    "text": {
+      "light": {
+        "primary": { "$type": "color", "$value": "#101C23" },
+        "heading": { "$type": "color", "$value": "#073C2B" },
+        "secondary": { "$type": "color", "$value": "rgba(16, 28, 35, 0.72)" },
+        "muted": { "$type": "color", "$value": "rgba(16, 28, 35, 0.56)" },
+        "inverse": { "$type": "color", "$value": "#FFFFFF" }
+      },
+      "dark": {
+        "primary": { "$type": "color", "$value": "oklch(0.98 0.005 165)" },
+        "heading": { "$type": "color", "$value": "oklch(0.98 0.005 165)" },
+        "secondary": { "$type": "color", "$value": "oklch(0.82 0.015 165)" },
+        "muted": { "$type": "color", "$value": "oklch(0.72 0.02 165)" },
+        "accent": { "$type": "color", "$value": "#B8E0D9" }
+      }
+    },
+    "surface": {
+      "page": { "$type": "color", "$value": "#FFFFFF" },
+      "pageAlt": { "$type": "color", "$value": "#F2F2F2" },
+      "pageWarm": { "$type": "color", "$value": "#FAFCF8" },
+      "card": { "$type": "color", "$value": "#FFFFFF" },
+      "cardAlt": { "$type": "color", "$value": "#F2F2F2" },
+      "brandDark": { "$type": "color", "$value": "oklch(0.16 0.02 175)" },
+      "brandDarkRaised": { "$type": "color", "$value": "oklch(0.20 0.03 165)" },
+      "brandDarkElevated": { "$type": "color", "$value": "oklch(0.24 0.04 165)" },
+      "brandVivid": { "$type": "color", "$value": "#00CA00" },
+      "brandSoft": { "$type": "color", "$value": "#B8E0D9" },
+      "popover": { "$type": "color", "$value": "#FFFFFF" },
+      "popoverDark": { "$type": "color", "$value": "oklch(0.20 0.03 165)" }
+    },
+    "border": {
+      "subtle": { "$type": "color", "$value": "#DCE6E2" },
+      "strong": { "$type": "color", "$value": "#073C2B" },
+      "brand": { "$type": "color", "$value": "#00CA00" },
+      "inverse": { "$type": "color", "$value": "rgba(255, 255, 255, 0.14)" }
+    },
+    "state": {
+      "success": { "$type": "color", "$value": "#168A4A", "$description": "Deep botanical success for readable text and icons on light surfaces" },
+      "successSurface": { "$type": "color", "$value": "#DDF7E7" },
+      "successDark": { "$type": "color", "$value": "oklch(0.78 0.27 142)" },
+      "info": { "$type": "color", "$value": "#197C86", "$description": "Cool teal-blue supporting info state" },
+      "infoSurface": { "$type": "color", "$value": "#DDF4F2" },
+      "infoDark": { "$type": "color", "$value": "oklch(0.65 0.10 180)" },
+      "warning": { "$type": "color", "$value": "#9A6100", "$description": "Warm ochre warning state that complements green without turning orange-heavy" },
+      "warningSurface": { "$type": "color", "$value": "#FFF2CF" },
+      "warningDark": { "$type": "color", "$value": "oklch(0.82 0.16 85)" },
+      "danger": { "$type": "color", "$value": "#B8322A", "$description": "Muted coral-red destructive state" },
+      "dangerSurface": { "$type": "color", "$value": "#FBE3DF" },
+      "dangerDark": { "$type": "color", "$value": "oklch(0.65 0.22 27)" },
+      "focus": { "$type": "color", "$value": "#B8E0D9" }
+    },
+    "chart": {
+      "primary": { "$type": "color", "$value": "oklch(0.78 0.27 142)" },
+      "secondary": { "$type": "color", "$value": "oklch(0.88 0.05 175)" },
+      "accent": { "$type": "color", "$value": "oklch(0.65 0.10 180)" },
+      "cool": { "$type": "color", "$value": "oklch(0.55 0.13 200)" },
+      "warning": { "$type": "color", "$value": "oklch(0.82 0.16 85)" },
+      "successDeep": { "$type": "color", "$value": "oklch(0.55 0.20 142)" },
+      "danger": { "$type": "color", "$value": "oklch(0.70 0.22 30)" },
+      "indigo": { "$type": "color", "$value": "oklch(0.55 0.07 240)" },
+      "neutral": { "$type": "color", "$value": "#586B63" },
+      "grid": { "$type": "color", "$value": "#DCE6E2" }
+    }
+  }
+}

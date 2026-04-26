@@ -1,0 +1,12 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "Imani shadow tokens. Flat by default, Fence Green tinted when elevation is needed.",
+  "shadow": {
+    "none": { "$type": "shadow", "$value": "none" },
+    "sm": { "$type": "shadow", "$value": "0 1px 2px rgba(7, 60, 43, 0.06)" },
+    "md": { "$type": "shadow", "$value": "0 6px 18px rgba(7, 60, 43, 0.10)" },
+    "lg": { "$type": "shadow", "$value": "0 18px 48px rgba(7, 60, 43, 0.16)" },
+    "focus": { "$type": "shadow", "$value": "0 0 0 3px rgba(184, 224, 217, 0.7)" },
+    "focusStrong": { "$type": "shadow", "$value": "0 0 0 4px rgba(184, 224, 217, 0.85)" }
+  }
+}

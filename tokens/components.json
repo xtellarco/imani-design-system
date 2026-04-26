@@ -1,0 +1,123 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "Imani component tokens. These are consumed by shadcn/ui source components and product UI.",
+  "component": {
+    "button": {
+      "height": { "compact": { "$value": "36px" }, "default": { "$value": "44px" }, "hero": { "$value": "56px" } },
+      "paddingX": { "compact": { "$value": "16px" }, "default": { "$value": "24px" }, "hero": { "$value": "32px" } },
+      "radius": { "$value": "{radius.md}" },
+      "fontFamily": { "$value": "{font.family.body}" },
+      "fontSize": { "$value": "16px" },
+      "fontWeight": { "$value": "{font.weight.medium}" },
+      "primaryBg": { "$value": "{color.brand.tunicGreen}" },
+      "primaryText": { "$value": "{color.brand.white}" },
+      "primaryHover": { "$value": "#00BE00" },
+      "primaryActive": { "$value": "#00B200" },
+      "secondaryBg": { "$value": "{color.brand.fenceGreen}" },
+      "secondaryText": { "$value": "{color.brand.white}" },
+      "outlineBorder": { "$value": "{color.brand.fenceGreen}" },
+      "outlineText": { "$value": "{color.brand.fenceGreen}" },
+      "inverseBg": { "$value": "{color.brand.white}" },
+      "inverseText": { "$value": "{color.brand.fenceGreen}" }
+    },
+    "input": {
+      "height": { "$value": "44px" },
+      "radius": { "$value": "{radius.md}" },
+      "borderWidth": { "$value": "1.5px" },
+      "border": { "$value": "{color.border.subtle}" },
+      "focusBorder": { "$value": "{color.brand.tunicGreen}" },
+      "focusRing": { "$value": "{color.brand.aquaBliss}" },
+      "background": { "$value": "{color.brand.white}" },
+      "text": { "$value": "{color.text.light.primary}" },
+      "placeholder": { "$value": "{color.text.light.muted}" }
+    },
+    "card": {
+      "background": { "$value": "{color.surface.card}" },
+      "backgroundAlt": { "$value": "{color.surface.cardAlt}" },
+      "radius": { "$value": "{radius.lg}" },
+      "padding": { "$value": "{spacing.6}" },
+      "gap": { "$value": "{spacing.4}" },
+      "border": { "$value": "{color.border.subtle}" },
+      "promoAccentHeight": { "$value": "4px" }
+    },
+    "badge": {
+      "height": { "$value": "24px" },
+      "radius": { "$value": "{radius.pill}" },
+      "paddingX": { "$value": "12px" },
+      "fontSize": { "$value": "12px" },
+      "fontWeight": { "$value": "{font.weight.medium}" }
+    },
+    "tabs": {
+      "listBg": { "$value": "{color.surface.pageAlt}" },
+      "triggerHeight": { "$value": "36px" },
+      "triggerRadius": { "$value": "{radius.md}" },
+      "activeBg": { "$value": "{color.brand.white}" },
+      "activeText": { "$value": "{color.brand.fenceGreen}" }
+    },
+    "table": {
+      "rowHeight": { "$value": "48px" },
+      "headerText": { "$value": "{color.text.light.secondary}" },
+      "border": { "$value": "{color.border.subtle}" }
+    },
+    "overlay": {
+      "dialogBg": { "$value": "{color.surface.popover}" },
+      "dialogDarkBg": { "$value": "{color.surface.popoverDark}" },
+      "radius": { "$value": "{radius.lg}" },
+      "shadow": { "$value": "{shadow.lg}" },
+      "backdrop": { "$value": "rgba(7, 60, 43, 0.32)" }
+    },
+    "focus": {
+      "ringWidth": { "$value": "3px" },
+      "ringColor": { "$value": "{color.brand.aquaBliss}" }
+    },
+    "control": {
+      "heightCompact": { "$value": "36px" },
+      "heightDefault": { "$value": "44px" },
+      "heightLarge": { "$value": "56px" },
+      "radius": { "$value": "{radius.md}" },
+      "labelFontSize": { "$value": "{font.size.bodySm}" },
+      "labelFontWeight": { "$value": "{font.weight.medium}" },
+      "selectedBg": { "$value": "{color.brand.tunicGreen}" },
+      "selectedText": { "$value": "{color.brand.white}" },
+      "trackBg": { "$value": "{color.surface.pageAlt}" },
+      "trackActiveBg": { "$value": "{color.brand.tunicGreen}" },
+      "thumbBg": { "$value": "{color.brand.white}" }
+    },
+    "navigation": {
+      "itemHeight": { "$value": "40px" },
+      "itemRadius": { "$value": "{radius.md}" },
+      "itemActiveBg": { "$value": "{color.surface.brandSoft}" },
+      "itemActiveText": { "$value": "{color.brand.fenceGreen}" },
+      "itemMutedText": { "$value": "{color.text.light.secondary}" },
+      "barBg": { "$value": "{color.surface.card}" },
+      "barBorder": { "$value": "{color.border.subtle}" }
+    },
+    "sidebar": {
+      "width": { "$value": "280px" },
+      "collapsedWidth": { "$value": "56px" },
+      "background": { "$value": "{color.surface.pageAlt}" },
+      "darkBackground": { "$value": "{color.surface.brandDarkRaised}" },
+      "border": { "$value": "{color.border.subtle}" }
+    },
+    "chart": {
+      "primary": { "$value": "{color.chart.primary}" },
+      "secondary": { "$value": "{color.chart.secondary}" },
+      "accent": { "$value": "{color.chart.accent}" },
+      "grid": { "$value": "{color.chart.grid}" },
+      "barRadius": { "$value": "{radius.sm}" }
+    },
+    "empty": {
+      "mediaSize": { "$value": "48px" },
+      "titleColor": { "$value": "{color.text.light.heading}" },
+      "descriptionColor": { "$value": "{color.text.light.secondary}" },
+      "surface": { "$value": "{color.surface.pageAlt}" }
+    },
+    "layout": {
+      "marketingColumns": { "$value": "12" },
+      "productColumns": { "$value": "8" },
+      "cardGridMin": { "$value": "280px" },
+      "sectionPaddingDesktop": { "$value": "{spacing.12}" },
+      "sectionPaddingMobile": { "$value": "{spacing.8}" }
+    }
+  }
+}

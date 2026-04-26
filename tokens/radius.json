@@ -1,0 +1,11 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "Imani radius tokens. Soft and rounded, with component-level meaning.",
+  "radius": {
+    "sm": { "$type": "dimension", "$value": "6px", "$description": "Inputs, tags, tiny controls" },
+    "md": { "$type": "dimension", "$value": "12px", "$description": "Buttons and controls" },
+    "lg": { "$type": "dimension", "$value": "20px", "$description": "Cards and modals" },
+    "xl": { "$type": "dimension", "$value": "32px", "$description": "Feature panels and hero containers" },
+    "pill": { "$type": "dimension", "$value": "999px", "$description": "Pills, capsules, circular controls" }
+  }
+}

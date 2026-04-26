@@ -1,0 +1,78 @@
+# Imani Design System
+
+Imani is an eco-friendly cleaning products brand. Interfaces should feel fresh, modern, clean, trusted, and green without using generic eco decoration.
+
+## Build Stack
+
+Bun, TypeScript, Next.js App Router, Tailwind CSS v4, shadcn/ui source components, Vercel.
+
+## Token Contract
+
+`DESIGN.md` is canonical. Source tokens live in `tokens/*.json`. Generated consumption artifacts live in `generated/variables.css`, `generated/tokens.ts`, `generated/tailwind-preset.js`, and `DESIGN_RULES.md`. Every Imani UI must consume those generated artifacts, not hard-coded colors or one-off component values.
+
+Website-readable copies are available at `/resources/variables.css`, `/resources/tokens.ts`, `/resources/tailwind-preset.js`, and `/resources/design-rules.md`.
+
+Run `bun run tokens:all` after editing tokens or source logo assets.
+
+## Brand Tokens
+
+- `--imani-tunic-green`: `#00CA00` primary brand and CTA color.
+- `--imani-fence-green`: `#073C2B` dark surface and heading color.
+- `--imani-aqua-bliss`: `#B8E0D9` accent and focus ring color.
+- `--imani-cloud-bleach`: `#F2F2F2` soft alternate surface.
+- `--imani-black-feather`: `#101C23` deepest neutral and body type.
+- `--imani-white`: `#FFFFFF` default surface and type on dark.
+
+Brand colors are not the whole application palette. Use brand tokens for identity and semantic shadcn tokens for product UI: `--background`, `--foreground`, `--card`, `--popover`, `--primary`, `--secondary`, `--accent`, `--muted`, `--border`, `--input`, `--ring`, `--success`, `--warning`, `--info`, `--destructive`, `--chart-*`, and `--sidebar-*`.
+
+Dark UI should use the darker semantic surface ramp from `DESIGN.md` Section 11, not one bright green field everywhere. Tunic Green is acceptable for CTAs, focus rings, status, and chart series; do not use Tunic Green for body copy.
+
+## Typography
+
+Display: Agency, fallback Quicksand, system UI. Use for h1, h2, display numerals, and short editorial subheads.
+
+Body/UI: DM Sans, system UI. Use for paragraphs, labels, forms, tables, and application UI.
+
+Do not use italics. Do not use display type for body copy.
+
+## Component Rules
+
+Buttons are 44px by default, 12px radius, DM Sans 500. Primary buttons are Tunic Green with white text. Secondary dark buttons are Fence Green with white text. Inverse buttons are white with Fence Green text.
+
+Site navbars use one shared shell rhythm across homepage and showcase pages: 64px height, 24px horizontal padding, and a 1680px max content width. Header action groups must keep paired controls the same height; for example, the "Agent brief" button and the color-mode icon button both use the compact 36px control height.
+
+Inputs are 44px tall, 12px radius, 1.5px border, Tunic Green focus border, and Aqua Bliss focus ring.
+
+Selects, dropdown menus, command palettes, popovers, dialogs, and menu rows use `rounded-md`, minimum 40px row height, and at least 12px horizontal padding. Avoid oversized pill-like overlay corners.
+
+Cards use white or Cloud Bleach, 20px radius, and 32px padding. Promotional cards may have a 4px Tunic Green top accent.
+
+Tags use pill radius and DM Sans 500 at 12px.
+
+Charts must use shadcn Chart primitives and `--chart-*` semantic colors. Calendar/date-picker examples must be real workflows, select dates interactively, populate the trigger/input, and hide out-of-month days unless explicitly needed.
+
+Showcase examples should be applied Imani product UI: refill operations, route scheduling, batch verification, ingredient compliance, inventory forecasting, customer portals, and operational dashboards. Do not make the primary showcase a raw dump of shadcn primitives.
+
+## Graphic Rules
+
+Use `/favicon-real.svg` for the petal/pinwheel mark. Use `/imani-logotype-light.svg` on light surfaces and `/imani-logotype.svg` on dark surfaces. Never redraw the logo in code. Do not rotate it arbitrarily, apply shadows, outline it, or recolor outside approved logo treatments. Do not add leaves, droplets, sparkles, or generic eco symbols.
+
+## Color Mode and Metadata Rules
+
+Every Imani project must support `light`, `dark`, and `system` color modes with class-based theming. Every Imani web project must generate and include favicon SVG, `favicon.ico`, PNG favicons, apple touch icon, Android icons, maskable icon, web manifest, Open Graph image, Twitter image, theme-color metadata, and JSON-LD metadata from the official logo source files.
+
+Run `bun run assets:brand` after changing `public/favicon-real.svg`, `public/imani-logotype.svg`, or `public/imani-logotype-light.svg`.
+
+Large petal/logo watermarks use 8-15% opacity, can bleed off-canvas, and must not become repeated decorative patterns.
+
+## Repo Pointers
+
+- Source tokens: `tokens/*.json`
+- Generated CSS tokens: `generated/variables.css`
+- Generated TS tokens: `generated/tokens.ts`
+- Generated Tailwind preset: `generated/tailwind-preset.js`
+- Generated rules: `DESIGN_RULES.md`
+- shadcn components: `src/components/ui`
+- Logo component: `src/components/imani-logo.tsx`
+- Agent repo guide: `AGENTS.md`
+- GitHub source: `https://github.com/xtellarco/imani-design-system`

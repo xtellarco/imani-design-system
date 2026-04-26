@@ -1,0 +1,50 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "Imani typography tokens and compositions.",
+  "font": {
+    "family": {
+      "display": { "$type": "fontFamily", "$value": "\"Agency\", \"Quicksand\", system-ui, sans-serif" },
+      "body": { "$type": "fontFamily", "$value": "\"DM Sans\", system-ui, sans-serif" },
+      "mono": { "$type": "fontFamily", "$value": "ui-monospace, SFMono-Regular, \"SF Mono\", Consolas, monospace" }
+    },
+    "weight": {
+      "regular": { "$type": "fontWeight", "$value": "400" },
+      "medium": { "$type": "fontWeight", "$value": "500" },
+      "bold": { "$type": "fontWeight", "$value": "700" }
+    },
+    "size": {
+      "caption": { "$type": "dimension", "$value": "12px" },
+      "bodySm": { "$type": "dimension", "$value": "14px" },
+      "body": { "$type": "dimension", "$value": "16px" },
+      "subtitle": { "$type": "dimension", "$value": "22px" },
+      "h3": { "$type": "dimension", "$value": "28px" },
+      "h2": { "$type": "dimension", "$value": "44px" },
+      "h1": { "$type": "dimension", "$value": "64px" },
+      "displayLg": { "$type": "dimension", "$value": "96px" },
+      "displayXl": { "$type": "dimension", "$value": "160px" }
+    },
+    "lineHeight": {
+      "caption": { "$type": "number", "$value": "1.4" },
+      "bodySm": { "$type": "number", "$value": "1.5" },
+      "body": { "$type": "number", "$value": "1.55" },
+      "subtitle": { "$type": "number", "$value": "1.3" },
+      "h3": { "$type": "number", "$value": "1.25" },
+      "h2": { "$type": "number", "$value": "1.15" },
+      "h1": { "$type": "number", "$value": "1.1" },
+      "displayLg": { "$type": "number", "$value": "1.05" },
+      "displayXl": { "$type": "number", "$value": "0.95" }
+    },
+    "letterSpacing": {
+      "default": { "$type": "dimension", "$value": "0" }
+    }
+  },
+  "typeRole": {
+    "displayXl": { "$type": "typography", "$value": { "fontFamily": "{font.family.display}", "fontSize": "{font.size.displayXl}", "fontWeight": "{font.weight.bold}", "lineHeight": "{font.lineHeight.displayXl}", "letterSpacing": "{font.letterSpacing.default}" } },
+    "displayLg": { "$type": "typography", "$value": { "fontFamily": "{font.family.display}", "fontSize": "{font.size.displayLg}", "fontWeight": "{font.weight.bold}", "lineHeight": "{font.lineHeight.displayLg}", "letterSpacing": "{font.letterSpacing.default}" } },
+    "h1": { "$type": "typography", "$value": { "fontFamily": "{font.family.display}", "fontSize": "{font.size.h1}", "fontWeight": "{font.weight.bold}", "lineHeight": "{font.lineHeight.h1}", "letterSpacing": "{font.letterSpacing.default}" } },
+    "h2": { "$type": "typography", "$value": { "fontFamily": "{font.family.display}", "fontSize": "{font.size.h2}", "fontWeight": "{font.weight.bold}", "lineHeight": "{font.lineHeight.h2}", "letterSpacing": "{font.letterSpacing.default}" } },
+    "h3": { "$type": "typography", "$value": { "fontFamily": "{font.family.body}", "fontSize": "{font.size.h3}", "fontWeight": "{font.weight.bold}", "lineHeight": "{font.lineHeight.h3}", "letterSpacing": "{font.letterSpacing.default}" } },
+    "body": { "$type": "typography", "$value": { "fontFamily": "{font.family.body}", "fontSize": "{font.size.body}", "fontWeight": "{font.weight.regular}", "lineHeight": "{font.lineHeight.body}", "letterSpacing": "{font.letterSpacing.default}" } },
+    "label": { "$type": "typography", "$value": { "fontFamily": "{font.family.body}", "fontSize": "{font.size.bodySm}", "fontWeight": "{font.weight.medium}", "lineHeight": "{font.lineHeight.bodySm}", "letterSpacing": "{font.letterSpacing.default}" } }
+  }
+}
