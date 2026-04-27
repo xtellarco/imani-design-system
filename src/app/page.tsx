@@ -6,6 +6,7 @@ import {
   ExternalLink,
   FileText,
   GitBranch,
+  Menu,
   PackageCheck,
   ShieldCheck,
   SlidersHorizontal,
@@ -36,6 +37,15 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import {
   Select,
   SelectContent,
@@ -149,12 +159,71 @@ export default function Home() {
               </a>
             </Button>
             <ColorModeSwitcher size="compact" />
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  aria-label="Open navigation menu"
+                  className="size-9 md:hidden"
+                >
+                  <Menu />
+                </Button>
+              </SheetTrigger>
+              <SheetContent className="w-[min(88vw,360px)] border-border p-0" side="right">
+                <SheetHeader className="border-b border-border p-5">
+                  <SheetTitle>
+                    <ImaniLogo />
+                  </SheetTitle>
+                  <SheetDescription>
+                    Navigate the Imani design system.
+                  </SheetDescription>
+                </SheetHeader>
+                <nav className="grid gap-1 p-3" aria-label="Mobile navigation">
+                  {sectionLinks.map(([label, href]) => (
+                    <SheetClose asChild key={href}>
+                      <a
+                        href={href}
+                        className="rounded-md px-3 py-3 text-base font-medium text-foreground transition hover:bg-muted"
+                      >
+                        {label}
+                      </a>
+                    </SheetClose>
+                  ))}
+                  <SheetClose asChild>
+                    <a
+                      href="/showcase"
+                      className="rounded-md px-3 py-3 text-base font-medium text-foreground transition hover:bg-muted"
+                    >
+                      Showcase
+                    </a>
+                  </SheetClose>
+                  <Separator className="my-2" />
+                  <SheetClose asChild>
+                    <a
+                      href="/llms.txt"
+                      className="rounded-md px-3 py-3 text-base font-medium text-foreground transition hover:bg-muted"
+                    >
+                      Agent brief
+                    </a>
+                  </SheetClose>
+                  <a
+                    href={githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-md px-3 py-3 text-base font-medium text-foreground transition hover:bg-muted"
+                  >
+                    GitHub repository
+                  </a>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </header>
 
       <section className="relative overflow-hidden bg-background">
-        <ImaniMark className="absolute -right-20 top-8 size-[420px] text-imani-fence-green/8 dark:text-white/10" />
+        <ImaniMark className="pointer-events-none absolute -right-40 top-44 size-[320px] opacity-[0.045] sm:-right-28 sm:top-14 sm:size-[420px] sm:opacity-[0.08] dark:opacity-[0.055] dark:sm:opacity-[0.1]" />
         <div className="imani-container relative grid min-h-[calc(100vh-64px)] items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="max-w-3xl">
             <p className="font-display text-2xl font-bold text-imani-tunic-green">
