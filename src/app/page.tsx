@@ -107,10 +107,10 @@ const surfaces = [
 ] as const;
 
 const implementationSteps = [
-  "Start from tokens in src/app/globals.css and src/lib/imani-design-system.ts.",
-  "Compose screens with shadcn/ui source components from src/components/ui.",
-  "Use the local Agency font for display and DM Sans for all body/UI copy.",
-  "Ship on Vercel under the imani-design-system project.",
+  "Start with DESIGN.md, generated tokens, and the shadcn semantic contract.",
+  "Compose screens from shadcn/ui source components in src/components/ui.",
+  "Use Agency for display moments and DM Sans for product UI, forms, tables, and long-form copy.",
+  "Publish through the linked Vercel project and keep design.imani.company current.",
 ] as const;
 
 const githubUrl = "https://github.com/xtellarco/imani-design-system";
@@ -233,9 +233,9 @@ export default function Home() {
               Imani design system
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-muted-foreground">
-              A production-ready technical site for scaling Imani interfaces with
-              exact brand primitives, shadcn/ui source components, and agent-readable
-              implementation rules.
+              The canonical technical system for building Imani interfaces with
+              brand primitives, shadcn/ui source components, reusable tokens, and
+              agent-readable implementation rules.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg">
@@ -287,10 +287,10 @@ export default function Home() {
           />
           <div className="grid gap-5 md:grid-cols-2">
             {[
-              ["Mission", "Effective cleaning products that protect the environment and customer health."],
-              ["Pillars", "Sustainability, innovation, care, and convenience guide every UI decision."],
-              ["Voice", "Confident, light, witty in marketing, direct in functional UI."],
-              ["Composition", "12-column marketing grids, 8-column product grids, soft radii, flat depth."],
+              ["Mission", "Build interfaces for cleaning products that are effective, sustainable, and easy to understand."],
+              ["Pillars", "Sustainability, innovation, care, and convenience guide product decisions and interface behavior."],
+              ["Voice", "Marketing can be light and witty; product UI stays direct, specific, and task-oriented."],
+              ["Composition", "Marketing uses 12-column grids; product UI uses denser 8-column layouts with restrained depth."],
             ].map(([title, body]) => (
               <Card key={title} className="bg-muted dark:bg-card">
                 <CardHeader>
@@ -311,7 +311,7 @@ export default function Home() {
             number="02"
             eyebrow="Bubbles of clarity"
             title="Primitives"
-            body="Every UI component on this site inherits from the same tokens exposed in CSS and TypeScript for repeatable consumption across projects."
+            body="Every component on this site inherits from tokens exposed as CSS variables, TypeScript constants, and Tailwind utilities for repeatable use across Imani projects."
           />
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -419,7 +419,7 @@ export default function Home() {
             number="03"
             eyebrow="A font as fresh as our suds"
             title="Components"
-            body="The examples below consume shadcn/ui source components customized with Imani token defaults, so downstream projects can copy patterns without reinterpreting the brand."
+            body="These examples use shadcn/ui source components wired to Imani token defaults, so downstream projects can reuse patterns without reinterpreting the brand."
           />
 
           <Tabs defaultValue="buttons" className="gap-6">
@@ -499,7 +499,7 @@ export default function Home() {
                       defaultValue="Plant-based surfactants, refillable packaging, and fragrance disclosure by batch."
                     />
                     <p className="text-sm leading-6 text-muted-foreground">
-                      UI microcopy stays practical: labels describe the task, not the pun.
+                      UI copy stays practical: labels describe the task, never the brand joke.
                     </p>
                   </div>
                 </CardContent>
@@ -511,7 +511,7 @@ export default function Home() {
                 {[
                   ["Feature card", "White surface, 32px padding, 20px radius, minimal shadow."],
                   ["Promo card", "Optional 4px Tunic Green top accent for promotional content only."],
-                  ["Product placeholder", "Use Cloud Bleach with a monospace image label until final photography exists."],
+                  ["Product media", "Use Cloud Bleach placeholders with a monospace label until final photography is available."],
                 ].map(([title, body], index) => (
                   <Card
                     key={title}
@@ -552,7 +552,7 @@ export default function Home() {
             number="04"
             eyebrow="Stains? Not on our palette."
             title="Layouts"
-            body="Marketing pages use a 12-column grid with generous margins. Product UI can tighten to 8 columns while keeping the same color, spacing, and type rules."
+            body="Marketing pages use a 12-column grid with generous margins. Product UI can tighten to 8 columns while keeping the same color, spacing, and typography rules."
             dark
           />
           <div className="imani-grid-mark grid grid-cols-4 gap-4 rounded-xl border border-white/12 p-5">
@@ -574,7 +574,7 @@ export default function Home() {
             number="05"
             eyebrow="Clean handoff"
             title="Agent resources"
-            body="This project includes both repo-local and website-visible resources so future agents can build Imani surfaces consistently."
+            body="This project publishes repo-local and website-visible resources so future agents can build Imani interfaces consistently."
           />
           <div className="space-y-5">
             <Card>
@@ -606,7 +606,7 @@ export default function Home() {
                   /agents.md
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  Website-visible guide for agents visiting imani.company.
+                  Website-visible guide for agents building Imani interfaces.
                 </p>
               </a>
               <a
@@ -618,7 +618,7 @@ export default function Home() {
                   /llms.txt
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  Concise crawlable implementation brief for model context.
+                  Concise crawlable implementation brief for model context and retrieval.
                 </p>
               </a>
             </div>

@@ -280,13 +280,14 @@ export default function ShowcasePage() {
               Clean UI, ready to rinse and repeat
             </h1>
             <p className="mt-4 max-w-xl text-base leading-7 text-muted-foreground">
-              A Sonic-style design-system demo translated into Imani primitives:
-              dashboard surfaces, operational forms, token tables, and component states.
+              Applied Imani product patterns built from design tokens, shadcn/ui
+              components, operational forms, dashboard surfaces, and accessible
+              component states.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Button>
                 <PackageCheck data-icon="inline-start" />
-                Start with components
+                  Start with components
               </Button>
               <Button asChild variant="outline">
                 <a href="/resources/tokens.ts">
@@ -356,7 +357,7 @@ export default function ShowcasePage() {
                     <div>
                       <CardTitle>Refill Operations</CardTitle>
                       <CardDescription>
-                        Use dense but breathable layouts for repeated operational work.
+                        Dense, readable layouts for repeated operations and daily review.
                       </CardDescription>
                     </div>
                     <Button variant="outline" size="sm">
@@ -399,7 +400,7 @@ export default function ShowcasePage() {
                 <CardHeader>
                   <CardTitle className="text-white">Batch Health</CardTitle>
                   <CardDescription className="text-white/70">
-                    Dark surfaces use white body text and Tunic Green accents.
+                    Dark surfaces use semantic tokens, white body text, and restrained Tunic Green accents.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-5">
@@ -425,8 +426,8 @@ export default function ShowcasePage() {
                   <div className="flex items-center gap-3 rounded-lg bg-white/8 p-4">
                     <Gauge className="size-5 text-imani-tunic-green" />
                     <p className="text-sm leading-6 text-white/76">
-                      Large display accents can use Tunic Green on Fence Green;
-                      body copy stays white or Aqua Bliss.
+                      Large accents may use Tunic Green on dark surfaces; body
+                      copy stays white, muted, or Aqua Bliss.
                     </p>
                   </div>
                 </CardContent>
@@ -436,7 +437,7 @@ export default function ShowcasePage() {
                 <CardHeader>
                   <CardTitle>Order Queue</CardTitle>
                   <CardDescription>
-                    Tables use DM Sans, restrained borders, and direct labels.
+                    Tables use DM Sans, restrained borders, and direct operational labels.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -528,7 +529,7 @@ export default function ShowcasePage() {
               <CardHeader>
                 <CardTitle>Type Specimens</CardTitle>
                 <CardDescription>
-                  Agency carries personality; DM Sans carries long-running work.
+                  Agency gives Imani its display voice; DM Sans keeps product UI readable.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-8">
@@ -618,7 +619,7 @@ function ProductSetupCard() {
     <Card className="bg-card">
       <CardHeader>
         <CardTitle>Product Setup</CardTitle>
-        <CardDescription>Functional UI copy stays direct and task-oriented.</CardDescription>
+        <CardDescription>Direct labels keep product setup fast and unambiguous.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="space-y-2">
@@ -659,7 +660,7 @@ function DispatchCalendarCard() {
     <Card className="bg-card">
       <CardHeader>
         <CardTitle className="text-2xl">Dispatch Calendar</CardTitle>
-        <CardDescription>Route scheduling with compact calendar density.</CardDescription>
+        <CardDescription>Route scheduling with compact calendar density and visible next steps.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="rounded-md border border-border bg-muted/25 p-3">
@@ -709,7 +710,7 @@ function ScheduleDispatchFormCard() {
     <Card className="bg-card">
       <CardHeader>
         <CardTitle>Schedule Dispatch</CardTitle>
-        <CardDescription>Date and time pickers inside an operational form.</CardDescription>
+        <CardDescription>Pick a route window and confirm the dispatch summary in one flow.</CardDescription>
       </CardHeader>
       <CardContent>
         <form className="space-y-4" onSubmit={(event) => event.preventDefault()}>
@@ -774,7 +775,7 @@ function ScheduleDispatchFormCard() {
             </div>
           </div>
           <div className="rounded-md border border-border bg-muted/35 p-3 text-sm">
-            <p className="font-medium text-foreground">Window summary</p>
+            <p className="font-medium text-foreground">Dispatch summary</p>
             <p className="mt-1 text-muted-foreground">
               {routeLabels[route]} · {formattedDate} at {time} · 8 stops
             </p>
@@ -838,7 +839,7 @@ function TokenStackCard() {
     <Card className="bg-card">
       <CardHeader>
         <CardTitle>Token Stack</CardTitle>
-        <CardDescription>Generated artifacts for every Imani project.</CardDescription>
+        <CardDescription>Generated implementation artifacts for every Imani project.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-3 font-mono text-xs">
         {artifacts.map(([file, use, href]) => (
@@ -861,7 +862,7 @@ function DropdownMenuCard() {
     <Card className="bg-card">
       <CardHeader>
         <CardTitle>Dropdown Menu</CardTitle>
-        <CardDescription>Action menus use the same radius and row rhythm as selects.</CardDescription>
+        <CardDescription>Action menus match select radius, spacing, and row rhythm.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <DropdownMenu>
@@ -889,7 +890,7 @@ function DropdownMenuCard() {
           </DropdownMenuContent>
         </DropdownMenu>
         <div className="rounded-lg border border-border bg-muted/35 p-3 text-sm text-muted-foreground">
-          Menu rows are 40px minimum with 12px horizontal padding.
+          Menu rows use a 40px minimum height with 12px or more horizontal padding.
         </div>
       </CardContent>
     </Card>
@@ -969,7 +970,7 @@ function VerificationCard() {
     <Card className="bg-card">
       <CardHeader>
         <CardTitle>Batch Verification</CardTitle>
-        <CardDescription>OTP and toggles support approval flows without becoming decorative pills.</CardDescription>
+        <CardDescription>Verification controls support approval workflows without becoming decorative pills.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-5">
         <div className="space-y-2">
@@ -1005,7 +1006,7 @@ function RefillChannelsCard() {
     <Card className="bg-card">
       <CardHeader>
         <CardTitle>Refill Channels</CardTitle>
-        <CardDescription>Weekly order source mix across refill plans, starter kits, and bulk deliveries.</CardDescription>
+        <CardDescription>Weekly order-source mix across refill plans, starter kits, and bulk deliveries.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <ChartContainer
@@ -1051,7 +1052,7 @@ function MenuDialogCard() {
     <Card className="bg-card">
       <CardHeader>
         <CardTitle>Menu & Dialog</CardTitle>
-        <CardDescription>Top-level menus and confirmation dialogs inherit the same overlay tokens.</CardDescription>
+        <CardDescription>Menus and confirmation dialogs inherit the same overlay tokens.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <Menubar>
@@ -1114,7 +1115,7 @@ function ImpactScoreCard() {
     <Card className="bg-card">
       <CardHeader>
         <CardTitle>Impact Score</CardTitle>
-        <CardDescription>Use product impact widgets for customer portals and ops dashboards.</CardDescription>
+        <CardDescription>Impact widgets fit customer portals, reports, and operations dashboards.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         {stats.map(([label, value, width, Icon]) => (
@@ -1167,7 +1168,7 @@ function InventoryForecastCard() {
     <Card className="bg-card">
       <CardHeader>
         <CardTitle>Inventory Forecast</CardTitle>
-        <CardDescription>Useful for refill packs, concentrates, and packaging components.</CardDescription>
+        <CardDescription>Forecast refill packs, concentrates, and packaging components before stock runs low.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <ChartContainer
@@ -1226,7 +1227,7 @@ function RouteEfficiencyCard() {
     <Card className="bg-card">
       <CardHeader>
         <CardTitle>Route Efficiency</CardTitle>
-        <CardDescription>For delivery planning, collection loops, and refill routes.</CardDescription>
+        <CardDescription>Compare delivery planning, collection loops, and refill route performance.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         {[
@@ -1257,7 +1258,7 @@ function SubscriptionMixCard() {
     <Card className="bg-card">
       <CardHeader>
         <CardTitle>Subscription Mix</CardTitle>
-        <CardDescription>Show channel health without making every chart green.</CardDescription>
+        <CardDescription>Show channel health with complementary chart tokens, not one-note green.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         {[
@@ -1356,7 +1357,7 @@ function AppliedComponentPatterns() {
           Applied Component Patterns
         </h2>
         <p className="mt-1 text-sm leading-6 text-muted-foreground">
-          Components are shown as Imani workflows: scheduling, verification, subscriptions, overlays, analytics, and operational forms.
+          Components are shown inside Imani workflows: scheduling, verification, subscriptions, overlays, analytics, and operational forms.
         </p>
       </div>
       <div className="grid gap-5 lg:grid-cols-3">
@@ -1380,7 +1381,7 @@ function BatchHealthCard() {
     <Card className="bg-card">
       <CardHeader>
         <CardTitle>Batch Health</CardTitle>
-        <CardDescription>Semantic states stay readable in light and dark modes.</CardDescription>
+        <CardDescription>Semantic states stay readable in both light and dark modes.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-5">
         {[
@@ -1407,8 +1408,8 @@ function InviteTeamCard() {
   return (
     <Card className="bg-card">
       <CardHeader>
-        <CardTitle>Invite Team</CardTitle>
-        <CardDescription>Add members to the launch workspace.</CardDescription>
+        <CardTitle>Invite Reviewers</CardTitle>
+        <CardDescription>Add launch reviewers before a product update ships.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-3">
         <Input defaultValue="alex@imani.company" />
@@ -1423,7 +1424,7 @@ function ShortcutCard() {
   return (
     <Card className="bg-card">
       <CardHeader>
-        <CardTitle>Shortcuts</CardTitle>
+        <CardTitle>Workflow Shortcuts</CardTitle>
       </CardHeader>
       <CardContent className="space-y-3">
         {[
@@ -1445,13 +1446,13 @@ function ReportBugCard() {
   return (
     <Card className="bg-card">
       <CardHeader>
-        <CardTitle>Report Bug</CardTitle>
-        <CardDescription>Help us fix issues faster.</CardDescription>
+        <CardTitle>Report Component Issue</CardTitle>
+        <CardDescription>Capture UI defects with enough context for design-system triage.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-3">
-        <Input placeholder="Brief description" />
-        <Textarea placeholder="Steps to reproduce" />
-        <Button className="w-full">Submit bug</Button>
+        <Input placeholder="Issue summary" />
+        <Textarea placeholder="Component, viewport, theme, and steps to reproduce" />
+        <Button className="w-full">Submit issue</Button>
       </CardContent>
     </Card>
   );
@@ -1461,7 +1462,7 @@ function ContributorCard() {
   return (
     <Card className="bg-card">
       <CardHeader>
-        <CardTitle>Contributors <span className="text-sm font-normal text-muted-foreground">312</span></CardTitle>
+        <CardTitle>Design Contributors <span className="text-sm font-normal text-muted-foreground">312</span></CardTitle>
       </CardHeader>
       <CardContent className="flex flex-wrap gap-2">
         {["AC", "BK", "CM", "DL", "EF", "GH", "IJ", "KL", "MN", "OP", "QR", "ST"].map((name) => (
@@ -1478,7 +1479,7 @@ function FeedbackCard() {
   return (
     <Card className="bg-card">
       <CardHeader>
-        <CardTitle>Feedback</CardTitle>
+        <CardTitle>Design Feedback</CardTitle>
       </CardHeader>
       <CardContent className="space-y-3">
         <Select defaultValue="tokens">
@@ -1489,8 +1490,8 @@ function FeedbackCard() {
             <SelectItem value="docs">Docs</SelectItem>
           </SelectContent>
         </Select>
-        <Textarea placeholder="Your feedback helps us improve..." />
-        <Button>Submit</Button>
+        <Textarea placeholder="Share a token, component, or documentation note." />
+        <Button>Submit feedback</Button>
       </CardContent>
     </Card>
   );
@@ -1500,13 +1501,13 @@ function ProfileCard() {
   return (
     <Card className="bg-card">
       <CardHeader>
-        <CardTitle>Profile</CardTitle>
-        <CardDescription>Manage visible contributor information.</CardDescription>
+        <CardTitle>Contributor Profile</CardTitle>
+        <CardDescription>Manage visible contributor information for design-system reviews.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-3">
         <Input defaultValue="imani" />
         <Input defaultValue="systems@imani.company" />
-        <Textarea placeholder="Tell us a little bit about yourself" />
+        <Textarea placeholder="Role, team, and contribution focus" />
         <Button>Save profile</Button>
       </CardContent>
     </Card>
@@ -1518,13 +1519,13 @@ function AnalyticsCard() {
     <Card className="bg-card">
       <CardHeader>
         <CardTitle>Analytics</CardTitle>
-        <CardDescription>Refill education traffic, conversion lift, and request volume.</CardDescription>
+        <CardDescription>Documentation traffic, refill education starts, and support deflection.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="flex items-end justify-between gap-3">
           <div>
             <p className="font-display text-3xl font-bold">418.2K</p>
-            <p className="text-sm text-muted-foreground">Visitors this cycle</p>
+            <p className="text-sm text-muted-foreground">Documentation visits</p>
           </div>
           <Badge className="bg-[var(--color-state-success-surface)] text-[var(--color-state-success)]">
             +10%
@@ -1570,7 +1571,7 @@ function DarkSurfaceCard() {
       <CardHeader>
         <CardTitle className="text-white">Dark Surface</CardTitle>
         <CardDescription className="text-white/75">
-          Fence Green grounds high-focus panels and footers.
+          Dark elevated surfaces ground high-focus panels and footers.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">

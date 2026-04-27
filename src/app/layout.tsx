@@ -26,10 +26,10 @@ const quicksand = Quicksand({
 
 const siteConfig = {
   name: "Imani Design System",
-  tagline: "Eco-friendly cleaning, reimagined.",
+  tagline: "The technical interface system for Imani.",
   description:
-    "A technical design system website for building Imani interfaces with Bun, Next.js, TypeScript, and shadcn/ui.",
-  url: "https://imani-design-system.vercel.app",
+    "The canonical design system for building accessible, token-driven Imani web interfaces with Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
+  url: "https://design.imani.company",
 };
 
 export const viewport: Viewport = {

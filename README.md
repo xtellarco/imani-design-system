@@ -1,8 +1,8 @@
 # Imani Design System
 
-Technical design system website for Imani, built with Bun, TypeScript, Next.js App Router, Tailwind CSS v4, and shadcn/ui.
+Canonical technical design system website for Imani, built with Bun, TypeScript, Next.js App Router, Tailwind CSS v4, and shadcn/ui.
 
-Production deployment: [imani-design-system.vercel.app](https://imani-design-system.vercel.app)
+Production deployment: [design.imani.company](https://design.imani.company)
 
 ## Commands
 

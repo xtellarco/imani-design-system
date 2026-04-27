@@ -1,6 +1,6 @@
-# Imani Website Agent Guide
+# Imani Design System Agent Guide
 
-Imani websites and interfaces are built from the Imani design system. Treat this document as the public build contract for agents visiting imani.company.
+Imani websites and product interfaces are built from this design system. Treat this document as the public build contract for agents working from design.imani.company.
 
 ## Required Stack
 
@@ -15,7 +15,7 @@ Imani websites and interfaces are built from the Imani design system. Treat this
 
 `DESIGN.md` is canonical. Source tokens are in `tokens/*.json`. Generated consumption artifacts are `generated/variables.css`, `generated/tokens.ts`, `generated/tailwind-preset.js`, and `DESIGN_RULES.md`. Agents building Imani UI must consume those artifacts instead of hardcoding brand values.
 
-Website-readable copies are available at `/resources/variables.css`, `/resources/tokens.ts`, `/resources/tailwind-preset.js`, and `/resources/design-rules.md`.
+Website-readable artifacts are available at `/resources/variables.css`, `/resources/tokens.ts`, `/resources/tailwind-preset.js`, and `/resources/design-rules.md`.
 
 - Tunic Green: `#00CA00`
 - Fence Green: `#073C2B`
@@ -49,7 +49,7 @@ Brand colors are different from design-system colors. Use brand colors for ident
 - Selects, dropdowns, popovers, dialogs, and menus use `rounded-md`, not oversized pill corners.
 - Use shadcn Chart primitives for charts and `--chart-*` semantic colors.
 - Calendar/date-picker examples must be interactive workflows that populate the trigger/input.
-- Showcase examples should demonstrate applied Imani product UI rather than raw primitive dumps.
+- Showcase examples should demonstrate applied Imani product workflows rather than raw primitive dumps.
 - Marketing headings may use light cleaning metaphors; buttons and errors must be direct.
 - The petal mark is the only brand-native graphic. Do not add leaves, droplets, sparkles, or generic eco symbols.
 - Petal/logo watermarks use 8-15% opacity and must not become repeated patterns.
