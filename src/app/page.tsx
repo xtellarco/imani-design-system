@@ -107,25 +107,25 @@ const githubUrl = "https://github.com/xtellarco/imani-design-system";
 
 export default function Home() {
   return (
-    <main className="bg-white text-imani-black-feather dark:bg-[var(--color-surface-brand-dark)] dark:text-white">
-      <header className="sticky top-0 z-40 border-b border-white/10 bg-[var(--color-surface-brand-dark)]/95 text-white backdrop-blur">
+    <main className="bg-background text-foreground">
+      <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-[1680px] items-center justify-between gap-6 px-6">
           <a href="#" className="shrink-0">
-            <ImaniLogo treatment="dark" />
+            <ImaniLogo />
           </a>
           <nav className="hidden items-center gap-1 md:flex" aria-label="Main navigation">
             {sectionLinks.map(([label, href]) => (
               <a
                 key={href}
                 href={href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-white/78 transition hover:bg-white/10 hover:text-white"
+                className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground"
               >
                 {label}
               </a>
             ))}
             <a
               href="/showcase"
-              className="rounded-md px-3 py-2 text-sm font-medium text-white/78 transition hover:bg-white/10 hover:text-white"
+              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground"
             >
               Showcase
             </a>
@@ -142,28 +142,28 @@ export default function Home() {
               variant="ghost"
               size="icon"
               aria-label="Open GitHub repository"
-              className="hidden size-9 border border-white/20 text-white hover:bg-white/10 hover:text-white sm:inline-flex"
+              className="hidden size-9 border border-border text-foreground hover:bg-muted hover:text-foreground sm:inline-flex"
             >
               <a href={githubUrl} target="_blank" rel="noreferrer">
                 <GitBranch />
               </a>
             </Button>
-            <ColorModeSwitcher surface="dark" size="compact" />
+            <ColorModeSwitcher size="compact" />
           </div>
         </div>
       </header>
 
-      <section className="relative overflow-hidden bg-[var(--color-surface-brand-dark)] text-white">
-        <ImaniMark className="absolute -right-20 top-8 size-[420px] opacity-[0.12]" />
+      <section className="relative overflow-hidden bg-background">
+        <ImaniMark className="absolute -right-20 top-8 size-[420px] text-imani-fence-green/8 dark:text-white/10" />
         <div className="imani-container relative grid min-h-[calc(100vh-64px)] items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="max-w-3xl">
             <p className="font-display text-2xl font-bold text-imani-tunic-green">
               The fresh face of clean
             </p>
-            <h1 className="mt-5 max-w-4xl font-display text-6xl font-bold leading-[1.02] text-balance sm:text-7xl lg:text-8xl">
+            <h1 className="mt-5 max-w-4xl font-display text-6xl font-bold leading-[1.02] text-balance text-foreground sm:text-7xl lg:text-8xl">
               Imani design system
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-white/82">
+            <p className="mt-6 max-w-xl text-lg leading-8 text-muted-foreground">
               A production-ready technical site for scaling Imani interfaces with
               exact brand primitives, shadcn/ui source components, and agent-readable
               implementation rules.
@@ -184,8 +184,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-xl border border-white/14 bg-white p-5 text-imani-fence-green shadow-[var(--shadow-lg)]">
-            <div className="rounded-lg bg-imani-cloud-bleach p-5">
+          <div className="rounded-xl border border-border bg-card p-5 text-card-foreground shadow-[var(--shadow-lg)]">
+            <div className="rounded-lg bg-muted p-5 dark:bg-[var(--color-surface-brand-dark-elevated)]">
               <div className="flex items-center justify-between gap-4">
                 <ImaniLogo />
                 <Badge className="bg-imani-aqua-bliss text-imani-fence-green">
@@ -196,7 +196,7 @@ export default function Home() {
                 {componentRules.slice(0, 4).map((rule) => (
                   <div
                     key={rule}
-                    className="flex items-start gap-3 rounded-md bg-white p-4 text-sm leading-6 shadow-[var(--shadow-sm)]"
+                    className="flex items-start gap-3 rounded-md bg-card p-4 text-sm leading-6 text-card-foreground shadow-[var(--shadow-sm)]"
                   >
                     <Check className="mt-0.5 size-4 text-imani-tunic-green" />
                     <span>{rule}</span>
@@ -208,7 +208,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="foundation" className="py-20 dark:bg-[var(--color-surface-brand-dark)]">
+      <section id="foundation" className="py-20">
         <div className="imani-container grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
           <SectionIntro
             number="01"
@@ -223,10 +223,10 @@ export default function Home() {
               ["Voice", "Confident, light, witty in marketing, direct in functional UI."],
               ["Composition", "12-column marketing grids, 8-column product grids, soft radii, flat depth."],
             ].map(([title, body]) => (
-              <Card key={title} className="bg-imani-cloud-bleach">
+              <Card key={title} className="bg-muted dark:bg-card">
                 <CardHeader>
                   <CardTitle>{title}</CardTitle>
-                  <CardDescription className="text-imani-black-feather/72">
+                  <CardDescription>
                     {body}
                   </CardDescription>
                 </CardHeader>
@@ -236,7 +236,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="primitives" className="bg-imani-cloud-bleach py-20 dark:bg-[var(--color-surface-brand-dark-raised)]">
+      <section id="primitives" className="bg-muted py-20 dark:bg-[var(--color-surface-brand-dark-raised)]">
         <div className="imani-container space-y-14">
           <SectionIntro
             number="02"
@@ -247,7 +247,7 @@ export default function Home() {
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {imaniColors[0].colors.map(([token, name, hex, role, foreground]) => (
-              <Card key={token} className="bg-white">
+              <Card key={token} className="bg-card">
                 <CardContent className="pt-0">
                   <div
                     className="flex h-36 flex-col justify-between rounded-lg p-4"
@@ -259,10 +259,10 @@ export default function Home() {
                     <span className="font-display text-4xl font-bold">{name}</span>
                   </div>
                   <div className="mt-4 space-y-2">
-                    <p className="font-mono text-xs font-medium text-imani-fence-green">
+                    <p className="font-mono text-xs font-medium text-foreground">
                       {hex}
                     </p>
-                    <p className="text-sm leading-6 text-imani-black-feather/72">
+                    <p className="text-sm leading-6 text-muted-foreground">
                       {role}
                     </p>
                   </div>
@@ -272,7 +272,7 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-            <Card className="bg-white">
+            <Card className="bg-card">
               <CardHeader>
                 <CardTitle>Type Scale</CardTitle>
                 <CardDescription>
@@ -304,7 +304,7 @@ export default function Home() {
             </Card>
 
             <div className="grid gap-6">
-              <Card className="bg-white">
+              <Card className="bg-card">
                 <CardHeader>
                   <CardTitle>Spacing</CardTitle>
                   <CardDescription>4px base scale for layouts and controls.</CardDescription>
@@ -312,15 +312,15 @@ export default function Home() {
                 <CardContent className="space-y-3">
                   {imaniSpacing.map(([token, value]) => (
                     <div key={token} className="grid grid-cols-[96px_1fr_48px] items-center gap-3">
-                      <span className="font-mono text-xs text-imani-fence-green">{token}</span>
+                      <span className="font-mono text-xs text-foreground">{token}</span>
                       <span className="h-3 rounded-sm bg-imani-tunic-green" style={{ width: value }} />
-                      <span className="text-sm text-imani-black-feather/70">{value}</span>
+                      <span className="text-sm text-muted-foreground">{value}</span>
                     </div>
                   ))}
                 </CardContent>
               </Card>
 
-              <Card className="bg-white">
+              <Card className="bg-card">
                 <CardHeader>
                   <CardTitle>Radii</CardTitle>
                 </CardHeader>
@@ -328,12 +328,12 @@ export default function Home() {
                   {imaniRadii.map(([token, value, use]) => (
                     <div key={token} className="flex items-center gap-4">
                       <div
-                        className="size-12 border-[1.5px] border-imani-fence-green bg-imani-aqua-bliss"
+                        className="size-12 border-[1.5px] border-border bg-accent"
                         style={{ borderRadius: value }}
                       />
                       <div>
-                        <p className="font-mono text-xs text-imani-fence-green">{token}</p>
-                        <p className="text-sm text-imani-black-feather/70">{value} · {use}</p>
+                        <p className="font-mono text-xs text-foreground">{token}</p>
+                        <p className="text-sm text-muted-foreground">{value} · {use}</p>
                       </div>
                     </div>
                   ))}
@@ -344,7 +344,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="components" className="py-20 dark:bg-[var(--color-surface-brand-dark)]">
+      <section id="components" className="py-20">
         <div className="imani-container space-y-12">
           <SectionIntro
             number="03"
@@ -354,7 +354,7 @@ export default function Home() {
           />
 
           <Tabs defaultValue="buttons" className="gap-6">
-            <TabsList className="h-auto flex-wrap rounded-md bg-imani-cloud-bleach p-1">
+            <TabsList className="h-auto flex-wrap rounded-md bg-muted p-1">
               <TabsTrigger value="buttons" className="px-4 py-2">Buttons</TabsTrigger>
               <TabsTrigger value="forms" className="px-4 py-2">Forms</TabsTrigger>
               <TabsTrigger value="cards" className="px-4 py-2">Cards</TabsTrigger>
@@ -374,7 +374,7 @@ export default function Home() {
                   <Button variant="secondary"><ShieldCheck data-icon="inline-start" /> Verify batch</Button>
                   <Button variant="outline"><Download data-icon="inline-start" /> Download tokens</Button>
                   <Button variant="ghost"><SlidersHorizontal data-icon="inline-start" /> Adjust</Button>
-                  <div className="rounded-lg bg-[var(--color-surface-brand-dark-elevated)] p-3">
+                  <div className="rounded-lg bg-muted p-3 dark:bg-[var(--color-surface-brand-dark-elevated)]">
                     <Button variant="inverse"><ExternalLink data-icon="inline-start" /> Open guide</Button>
                   </div>
                   <Tooltip>
@@ -429,7 +429,7 @@ export default function Home() {
                       id="notes"
                       defaultValue="Plant-based surfactants, refillable packaging, and fragrance disclosure by batch."
                     />
-                    <p className="text-sm leading-6 text-imani-black-feather/64">
+                    <p className="text-sm leading-6 text-muted-foreground">
                       UI microcopy stays practical: labels describe the task, not the pun.
                     </p>
                   </div>
@@ -453,7 +453,7 @@ export default function Home() {
                       <CardDescription>{body}</CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <div className="flex aspect-[4/5] items-center justify-center rounded-lg bg-imani-cloud-bleach font-mono text-xs text-imani-fence-green">
+                      <div className="flex aspect-[4/5] items-center justify-center rounded-lg bg-muted font-mono text-xs text-foreground">
                         [ product shot - counter-spray, 4:5 ]
                       </div>
                     </CardContent>
@@ -499,7 +499,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="agents" className="py-20 dark:bg-[var(--color-surface-brand-dark)]">
+      <section id="agents" className="py-20">
         <div className="imani-container grid gap-12 lg:grid-cols-[0.75fr_1.25fr]">
           <SectionIntro
             number="05"
@@ -530,25 +530,25 @@ export default function Home() {
             <div className="grid gap-4 md:grid-cols-2">
               <a
                 href="/agents.md"
-                className="rounded-lg border border-border bg-imani-cloud-bleach p-6 transition hover:border-imani-tunic-green"
+                className="rounded-lg border border-border bg-muted p-6 text-foreground transition hover:border-imani-tunic-green"
               >
                 <ClipboardList className="size-5 text-imani-tunic-green" />
-                <h3 className="mt-4 font-sans text-2xl font-bold text-imani-fence-green">
+                <h3 className="mt-4 font-sans text-2xl font-bold text-foreground">
                   /agents.md
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-imani-black-feather/70">
+                <p className="mt-2 text-sm leading-6 text-muted-foreground">
                   Website-visible guide for agents visiting imani.company.
                 </p>
               </a>
               <a
                 href="/llms.txt"
-                className="rounded-lg border border-border bg-imani-cloud-bleach p-6 transition hover:border-imani-tunic-green"
+                className="rounded-lg border border-border bg-muted p-6 text-foreground transition hover:border-imani-tunic-green"
               >
                 <FileText className="size-5 text-imani-tunic-green" />
-                <h3 className="mt-4 font-sans text-2xl font-bold text-imani-fence-green">
+                <h3 className="mt-4 font-sans text-2xl font-bold text-foreground">
                   /llms.txt
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-imani-black-feather/70">
+                <p className="mt-2 text-sm leading-6 text-muted-foreground">
                   Concise crawlable implementation brief for model context.
                 </p>
               </a>
@@ -557,7 +557,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-border bg-imani-cloud-bleach py-10 dark:bg-[var(--color-surface-brand-dark-raised)]">
+      <footer className="border-t border-border bg-muted py-10 dark:bg-[var(--color-surface-brand-dark-raised)]">
         <div className="imani-container flex flex-col justify-between gap-6 sm:flex-row sm:items-center">
           <ImaniLogo />
           <div className="flex flex-wrap items-center gap-2">
@@ -608,13 +608,13 @@ function SectionIntro({
         </p>
         <h2
           className={`mt-3 font-display text-5xl font-bold leading-tight text-balance ${
-            dark ? "text-white" : "text-imani-fence-green"
+            dark ? "text-white" : "text-foreground"
           }`}
         >
           {title}
         </h2>
         <Separator className={`my-6 ${dark ? "bg-white/18" : ""}`} />
-        <p className={`text-base leading-7 ${dark ? "text-white/76" : "text-imani-black-feather/72"}`}>
+        <p className={`text-base leading-7 ${dark ? "text-white/76" : "text-muted-foreground"}`}>
           {body}
         </p>
       </div>
