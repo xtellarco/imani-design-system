@@ -1,22 +1,49 @@
 import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
+import os from "node:os";
 import path from "node:path";
-import sharp from "sharp";
 
 const root = process.cwd();
 const publicDir = path.join(root, "public");
 const iconsDir = path.join(publicDir, "icons");
 const ogDir = path.join(publicDir, "og");
 const artifactsDir = path.join(publicDir, "artifacts");
+const fontsDir = path.join(root, "fonts");
 
 const markSvg = path.join(publicDir, "favicon-real.svg");
 const darkLogotypeSvg = path.join(publicDir, "imani-logotype.svg");
 const lightLogotypeSvg = path.join(publicDir, "imani-logotype-light.svg");
+const fontConfigDir = path.join(os.tmpdir(), "imani-design-system-fontconfig");
+const fontConfigFile = path.join(fontConfigDir, "fonts.conf");
+
+function escapeXml(value) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
 
 await Promise.all([
   mkdir(iconsDir, { recursive: true }),
   mkdir(ogDir, { recursive: true }),
   mkdir(artifactsDir, { recursive: true }),
+  mkdir(fontConfigDir, { recursive: true }),
 ]);
+
+await writeFile(
+  fontConfigFile,
+  `<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+  <dir>${escapeXml(fontsDir)}</dir>
+  <cachedir>${escapeXml(fontConfigDir)}</cachedir>
+</fontconfig>
+`
+);
+
+process.env.FONTCONFIG_FILE = fontConfigFile;
+
+const { default: sharp } = await import("sharp");
 
 await Promise.all([
   copyFile(markSvg, path.join(publicDir, "favicon.svg")),
@@ -130,10 +157,10 @@ const lightLogoPng = await sharp(lightLogotypeSvg)
 const ogText = Buffer.from(`
   <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
     <style>
-      .eyebrow { fill: #00CA00; font: 700 34px Arial, sans-serif; }
-      .title { fill: #FFFFFF; font: 700 84px Arial, sans-serif; }
-      .body { fill: rgba(255,255,255,0.78); font: 500 34px Arial, sans-serif; }
-      .meta { fill: #B8E0D9; font: 600 25px Arial, sans-serif; }
+      .eyebrow { fill: #00CA00; font: 700 34px Agency, sans-serif; }
+      .title { fill: #FFFFFF; font: 700 84px Agency, sans-serif; }
+      .body { fill: rgba(255,255,255,0.78); font: 500 34px "DM Sans", sans-serif; }
+      .meta { fill: #B8E0D9; font: 500 25px "DM Sans", sans-serif; }
     </style>
     <text x="76" y="260" class="eyebrow">Eco-friendly cleaning, reimagined.</text>
     <text x="76" y="356" class="title">Imani Design System</text>
@@ -180,10 +207,10 @@ await sharp({
       input: Buffer.from(`
         <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
           <style>
-            .title { fill: #073C2B; font: 700 86px Arial, sans-serif; }
-            .body { fill: #101C23; opacity: .78; font: 500 34px Arial, sans-serif; }
+            .title { fill: #073C2B; font: 700 86px Agency, sans-serif; }
+            .body { fill: #101C23; opacity: .78; font: 500 34px "DM Sans", sans-serif; }
             .pill { fill: #00CA00; }
-            .pillText { fill: #FFFFFF; font: 700 24px Arial, sans-serif; }
+            .pillText { fill: #FFFFFF; font: 700 24px "DM Sans", sans-serif; }
           </style>
           <rect x="76" y="450" width="292" height="54" rx="27" class="pill"/>
           <text x="112" y="485" class="pillText">Design system</text>
